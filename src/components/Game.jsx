@@ -36,9 +36,17 @@ const Game = () => {
   const isCardMatched = (index) => matchedCards.includes(index);
 
   return (
-    <div>
+    <div style={{ textAlign: "center" }}>
       <div>Ходов: {moves}</div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          maxWidth: "420px", // Ширина для 4 карточек в ряду
+          margin: "auto",
+        }}
+      >
         {cards.map((card, index) => (
           <Card
             key={index}

@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-/* .card-grid {
+.cardGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -15,4 +15,4 @@
   border: 1px solid #ddd;
   font-size: 40px;
   cursor: pointer;
-} */
+}

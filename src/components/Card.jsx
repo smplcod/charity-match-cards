@@ -6,7 +6,7 @@ const Card = ({ card, opened, onClick }) => {
     height: "100px",
     border: "1px solid black",
     display: "inline-block",
-    margin: "5px",
+    margin: "5px", // Равное расстояние между карточками
     lineHeight: "100px",
     textAlign: "center",
     background: opened ? "white" : "gray",
