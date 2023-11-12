@@ -20,7 +20,7 @@ HTML, CSS, ReactJS, Firebase
 Игра с карточками, которые открываются попарно, задача - открыть все карточки за наименьшее количество ходов.
 
 ### Реализованный функционал:
-## [https://smplcod.github.io/charity-match-cards/](https://smplcod.github.io/charity-match-cards/) Демо
+#### [https://smplcod.github.io/charity-match-cards/](https://smplcod.github.io/charity-match-cards/) Демо
 1. вывод поля с рандомно расположенными карточками (каждый раунд - новая позиция карточек);
 2. возможность открывать карточки;
 3. закрытие непарных карточек, парные - остаются открытыми;
