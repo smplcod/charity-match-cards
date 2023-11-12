@@ -1,6 +1,6 @@
 # 💗Charity Match Cards
 ## Игра Memory Game/Match Cards
-### [https://smplcod.github.io/charity-match-cards/](https://smplcod.github.io/charity-match-cards/) Демо
+### Демо [https://smplcod.github.io/charity-match-cards/](https://smplcod.github.io/charity-match-cards/) 
 
 Команда №51
 
