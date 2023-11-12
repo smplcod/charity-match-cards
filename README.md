@@ -1,5 +1,5 @@
 # 💗Charity Match Cards
-## Игра Memory Game
+## Игра Memory Game/Match Cards
 
 Команда №51
 
