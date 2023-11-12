@@ -3,10 +3,16 @@
 Команда №51
 
 Участники:
-1. Михаил: @mihailscode (ищу свою первую Frontend работу, имел опыт работы в команде по другому стеку давно)
+1. Михаил: @mihailscode
+   (ищу свою первую Frontend работу, имел опыт работы в команде по другому стеку давно)
 
 ## Используемые технологии
 HTML, CSS, ReactJS, Firebase 
+
+## Дизайн-концепт
+<img width="790" alt="image" src="https://github.com/smplcod/charity-match-cards/assets/87027979/f2e4c398-d9e8-4559-8abb-ca7160d8a2d2">
+<img width="790" alt="image" src="https://github.com/smplcod/charity-match-cards/assets/87027979/12eea9dd-ced7-44cf-b2f5-5b87cfcd7724">
+
 
 ## Описание проекта
 Игра с карточками, которые открываются попарно, задача - открыть все карточки за наименьшее количество ходов.
