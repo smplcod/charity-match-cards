@@ -1,5 +1,6 @@
 {
-  "name": "99-template",
+  "name": "charity-match-cards",
+  "homepage": "https://smplcod.github.io/charity-match-cards",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
