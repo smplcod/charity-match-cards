@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkcharity_match_cards=self.webpackChunkcharity_match_cards||[]).push([[855],{855:function(a,c,t){a.exports=t.p+"static/media/10.68dd0a196b10f99f1e95.png"}}]);
