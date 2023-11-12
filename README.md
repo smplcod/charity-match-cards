@@ -12,6 +12,8 @@ HTML, CSS, ReactJS, Firebase
 ## Дизайн-концепт
 <img width="300" alt="image" src="https://github.com/smplcod/charity-match-cards/assets/87027979/f2e4c398-d9e8-4559-8abb-ca7160d8a2d2"><img width="300" alt="image" src="https://github.com/smplcod/charity-match-cards/assets/87027979/f2e4c398-d9e8-4559-8abb-ca7160d8a2d2">
 
+![Uploading telegram-cloud-photo-size-2-5368347656008618009-y.jpg…]()
+
 
 ## Описание проекта
 Игра с карточками, которые открываются попарно, задача - открыть все карточки за наименьшее количество ходов.
