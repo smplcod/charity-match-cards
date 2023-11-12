@@ -8,6 +8,7 @@ function App() {
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
   const [images, setImages] = useState([]);
+  const [isGameOver, setIsGameOver] = useState(false);
 
   // Загрузка картинок
   useEffect(() => {
@@ -35,13 +36,10 @@ function App() {
   }, [images]);
 
   const shuffleCards = () => {
-    // Выбираем случайный набор картинок
     const selectedImages = images.sort(() => 0.5 - Math.random()).slice(0, 8);
-
     const shuffledCards = [...selectedImages, ...selectedImages]
       .sort(() => Math.random() - 0.5)
       .map((image, index) => ({ id: index, src: image, flipped: false }));
-
     setChoiceOne(null);
     setChoiceTwo(null);
     setCards(shuffledCards);
@@ -82,8 +80,21 @@ function App() {
     setDisabled(false);
   };
 
+  // Проверка завершения игры
+  useEffect(() => {
+    if (cards.length > 0 && cards.every((card) => card.flipped)) {
+      setIsGameOver(true);
+    }
+  }, [cards]);
+
+  // Функция закрытия модального окна
+  const closeDialog = () => {
+    setIsGameOver(false);
+    shuffleCards();
+  };
+
   return (
-    <div className={styles.app}>
+    <div className={`${styles.app} ${isGameOver ? styles.dialogOpen : ""}`}>
       <h1>Memory Game</h1>
       <button onClick={shuffleCards}>Новая игра</button>
       <div className={styles.cardGrid}>
@@ -103,6 +114,12 @@ function App() {
         ))}
       </div>
       <p>Ходы: {turns}</p>
+      <dialog open={isGameOver} className={styles.dialog}>
+        <h2>Поздравляем с победой!</h2>
+        <p>Вы сделали {turns} ходов</p>
+        <button onClick={closeDialog}>OK</button>
+      </dialog>
+      <div className={styles.dialogBackdrop}></div>
     </div>
   );
 }
