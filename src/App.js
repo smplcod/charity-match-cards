@@ -7,13 +7,40 @@ function App() {
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
   const [disabled, setDisabled] = useState(false);
-  const emojiCards = ["👨", "👩", "👧", "👦", "👶", "👵", "👴", "🐶"];
+  const [images, setImages] = useState([]);
+
+  // Загрузка картинок
+  useEffect(() => {
+    const loadImages = async () => {
+      let loadedImages = [];
+      try {
+        for (let i = 1; i <= 16; i++) {
+          const image = await import(`./images/${i}.png`);
+          loadedImages.push(image.default);
+        }
+      } catch {
+        console.log("All images loaded or some images are missing");
+      }
+      setImages(loadedImages);
+    };
+
+    loadImages();
+  }, []);
 
   // Перемешивание карт
+  useEffect(() => {
+    if (images.length > 0) {
+      shuffleCards();
+    }
+  }, [images]);
+
   const shuffleCards = () => {
-    const shuffledCards = [...emojiCards, ...emojiCards]
+    // Выбираем случайный набор картинок
+    const selectedImages = images.sort(() => 0.5 - Math.random()).slice(0, 8);
+
+    const shuffledCards = [...selectedImages, ...selectedImages]
       .sort(() => Math.random() - 0.5)
-      .map((card) => ({ id: Math.random(), emoji: card, flipped: false }));
+      .map((image, index) => ({ id: index, src: image, flipped: false }));
 
     setChoiceOne(null);
     setChoiceTwo(null);
@@ -30,10 +57,10 @@ function App() {
   useEffect(() => {
     if (choiceOne && choiceTwo) {
       setDisabled(true);
-      if (choiceOne.emoji === choiceTwo.emoji) {
+      if (choiceOne.src === choiceTwo.src) {
         setCards((prevCards) => {
           return prevCards.map((card) => {
-            if (card.emoji === choiceOne.emoji) {
+            if (card.src === choiceOne.src) {
               return { ...card, flipped: true };
             } else {
               return card;
@@ -55,11 +82,6 @@ function App() {
     setDisabled(false);
   };
 
-  // Начальное перемешивание карт
-  useEffect(() => {
-    shuffleCards();
-  }, []);
-
   return (
     <div className={styles.app}>
       <h1>Memory Game</h1>
@@ -72,9 +94,11 @@ function App() {
             onClick={() => !disabled && !card.flipped && handleChoice(card)}
             disabled={card.flipped}
           >
-            {card.flipped || card === choiceOne || card === choiceTwo
-              ? card.emoji
-              : "❓"}
+            {card.flipped || card === choiceOne || card === choiceTwo ? (
+              <img src={card.src} alt="card" className={styles.cardImage} />
+            ) : (
+              "❓"
+            )}
           </button>
         ))}
       </div>
