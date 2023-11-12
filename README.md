@@ -10,8 +10,7 @@
 HTML, CSS, ReactJS, Firebase 
 
 ## Дизайн-концепт
-<img width="200" alt="image" src="https://github.com/smplcod/charity-match-cards/assets/87027979/f2e4c398-d9e8-4559-8abb-ca7160d8a2d2">
-![telegram-cloud-photo-size-2-5368347656008618009-y](https://github.com/smplcod/charity-match-cards/assets/87027979/8f74f35c-a3ce-4790-a537-042550ffbb94)
+<img width="300" alt="image" src="https://github.com/smplcod/charity-match-cards/assets/87027979/f2e4c398-d9e8-4559-8abb-ca7160d8a2d2"><img width="300" alt="image" src="https://github.com/smplcod/charity-match-cards/assets/87027979/f2e4c398-d9e8-4559-8abb-ca7160d8a2d2">
 
 
 ## Описание проекта
