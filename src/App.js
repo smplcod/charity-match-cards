@@ -117,7 +117,12 @@ function App() {
       <dialog open={isGameOver} className={styles.dialog}>
         <h2>Поздравляем с победой!</h2>
         <p>Вы сделали {turns} ходов</p>
-        <button onClick={closeDialog}>OK</button>
+        <button
+          onClick={closeDialog}
+          style={{ backgroundColor: "#8b5e3c", color: "white" }}
+        >
+          OK
+        </button>
       </dialog>
       <div className={styles.dialogBackdrop}></div>
     </div>

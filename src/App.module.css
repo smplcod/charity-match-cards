@@ -53,11 +53,26 @@ button:hover {
 
 /* Стилизация модального окна */
 .dialog {
-  /* Оставьте предыдущие стили, они подходят */
+  position: fixed; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  z-index: 2;
 }
-
 .dialogBackdrop {
-  /* Оставьте предыдущие стили, они подходят */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  display: none;
 }
 
 /* Стилизация бэкдропа */
@@ -67,6 +82,12 @@ button:hover {
 
 /* Стилизация кнопки внутри модального окна */
 .dialog > button {
-  background-color: #8b5e3c; /* Цвет кнопки */
-  /* Оставьте остальные стили */
+  background-color: #8b5e3c;
+	margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
