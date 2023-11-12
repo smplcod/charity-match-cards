@@ -3,7 +3,8 @@
 Команда №51
 
 Участники:
-1. Михаил: [@mihailscode](https://t.me/mihailscode) (клик & interview me please)
+1. Михаил: [@mihailscode](https://t.me/mihailscode)  
+   (клик & interview me please)  
    (ищу свою первую Frontend работу, имел опыт работы в команде по другому стеку давно)
 
 ## Используемые технологии
